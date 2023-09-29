@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  web:
+    image: fk427/index.html
+    ports:
+      - "80:80"
