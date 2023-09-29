@@ -2,6 +2,6 @@ version: '3'
 
 services:
   web:
-    image: fk427/index.html
+    image: fk427/nginx-static-website:${{ github.sha }}
     ports:
       - "80:80"
