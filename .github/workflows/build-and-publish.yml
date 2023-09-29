@@ -22,5 +22,6 @@ jobs:
 
       - name: Build and tag Docker image
         run: docker build -t fk427/nginx-static-website .
+      
       - name: Push Docker image to Docker Hub
-        run: fk427/nginx-static-website:${{ github.sha }}
+        run: docker push fk427/nginx-static-website:${{ github.sha }}
