@@ -23,5 +23,5 @@ jobs:
 
       
       - name: Push Docker image to Docker Hub
-        run:  docker push jafarsw/nginx-static-website:latest
-              docker push jafarsw/nginx-static-website:${{ github.sha }}
+        run:  docker push fk427/nginx-static-website:latest
+              docker push fk427/nginx-static-website:${{ github.sha }}
