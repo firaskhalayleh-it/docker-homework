@@ -21,8 +21,10 @@ jobs:
         run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
       - name: Build and tag Docker image
-        run: docker build -t fk427/nginx-static-website:v1.0 .
+        run: docker build -t fk427/nginx-static-website:latest .
+             docker tag fk427/nginx-static-website:latest fk427/nginx-static-website:${{ github.sha }}
 
       
       - name: Push Docker image to Docker Hub
-        run: docker push fk427/nginx-static-website:v1.0 .
+        run:  docker push jafarsw/nginx-static-website:latest
+              docker push jafarsw/nginx-static-website:${{ github.sha }}
